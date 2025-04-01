@@ -1,0 +1,76 @@
+﻿<Window x:Name="windowSoftfonJerzy" x:Class="SoftfonJerzyUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SoftfonJerzyUI"
+        mc:Ignorable="d"
+        Title="Softfon Jerzy" Height="250" Width="480" Background="{DynamicResource {x:Static SystemColors.ActiveBorderBrushKey}}">
+    <Grid Margin="0,0,3,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="0.9*" />
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="3,3,0,3">URI centrali</Label>
+            <Label Grid.Row="1" Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="3,3,0,3">Twój URI (nr)</Label>
+            <Label Grid.Row="2" Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="3,3,0,3">Login</Label>
+            <Label Grid.Row="3" Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="3,3,0,3">Hasło</Label>
+            <Button x:Name="buttonRegister" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Click="ButtonRegister_Click" Margin="3,3,2,3">Zarejestruj</Button>
+            <Label x:Name="labelRegisterState" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="3,2,3,3">Tu pojawi się stan rejestracji.</Label>
+
+            <TextBox x:Name="textBoxRegURI" Grid.Row="0" Grid.Column="1" Margin="0,3,3,3"></TextBox>
+            <TextBox x:Name="textBoxUserURI" Grid.Row="1" Grid.Column="1" Margin="0,3,3,3"></TextBox>
+            <TextBox x:Name="textBoxLogin" Grid.Row="2" Grid.Column="1" Margin="0,3,3,3"></TextBox>
+            <PasswordBox x:Name="passwordBoxPassword" Grid.Row="3" Grid.Column="1" Margin="0,3,3,3"></PasswordBox>
+            
+        </Grid>
+        <Grid x:Name="gridNumericPanel" Grid.Column="1" Margin="5,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.3*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,3,0,4" Content="URI"/>
+            <TextBox x:Name="textBoxURI" Grid.ColumnSpan="2" Grid.Column="1" TextWrapping="Wrap" Margin="0,3,1,4"/>
+            <Button x:Name="button1" Grid.Column="0" Grid.Row="1" Click="Button1_Click">1</Button>
+            <Button x:Name="button2" Grid.Column="1" Grid.Row="1" Click="Button2_Click">2</Button>
+            <Button x:Name="button3" Grid.Column="2" Grid.Row="1" Click="Button3_Click">3</Button>
+            <Button x:Name="button4" Grid.Column="0" Grid.Row="2" Click="Button4_Click">4</Button>
+            <Button x:Name="button5" Grid.Column="1" Grid.Row="2" Click="Button5_Click">5</Button>
+            <Button x:Name="button6" Grid.Column="2" Grid.Row="2" Click="Button6_Click">6</Button>
+            <Button x:Name="button7" Grid.Column="0" Grid.Row="3" Click="Button7_Click">7</Button>
+            <Button x:Name="button8" Grid.Column="1" Grid.Row="3" Click="Button8_Click">8</Button>
+            <Button x:Name="button9" Grid.Column="2" Grid.Row="3" Click="Button9_Click">9</Button>
+            <Button x:Name="buttonAsterisk" Grid.Column="0" Grid.Row="4" Click="ButtonAsterisk_Click">*</Button>
+            <Button x:Name="button0" Grid.Column="1" Grid.Row="4" Click="Button0_Click">0</Button>
+            <Button x:Name="buttonGrill" Grid.Column="2" Grid.Row="4" Click="ButtonGrill_Click">#</Button>
+            <Button x:Name="buttonCall" Grid.Column="0" Grid.Row="5" Grid.ColumnSpan="2" Click="ButtonCall_Click" Foreground="Green">Zadzwoń 📞</Button>
+            <Button x:Name="buttonHangUp" Grid.Column="2" Grid.Row="5" Foreground="Red" Click="ButtonHangUp_Click">📞</Button>
+            <Label x:Name="labelCallState" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Margin="0,3,1,3" Content="Tu pojawi się stan połączenia."/>
+        </Grid>
+    </Grid>
+</Window>
