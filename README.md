@@ -29,5 +29,4 @@ The graphical user interface (GUI) is built using **Windows Presentation Foundat
 ## Installation & Usage
 TBD – instructions for building and running the application will be added soon.
 
-## License
-This project is released under the MIT License. See [LICENSE](LICENSE) for more details.
+![UI Screenshot](screenshot.png)
